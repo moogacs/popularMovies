@@ -1,0 +1,167 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/detail_layout"
+    android:visibility="invisible"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.mooga.popularmovies.DetailActivityFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#fff"
+                android:background="#109e7c"
+                android:paddingLeft="10dp"
+                android:paddingRight="@dimen/title_padding"
+                android:paddingTop="@dimen/title_padding"
+                android:paddingBottom="@dimen/title_padding"
+                android:textStyle="bold"
+                android:textSize="32sp"
+                tools:text="Jurassic World" />
+
+            <ImageView
+                android:id="@+id/poster"
+                android:layout_width="185dp"
+                android:layout_height="270dp"
+                android:layout_alignParentBottom="false"
+                android:layout_below="@+id/title"
+                android:layout_margin="10dp" />
+
+            <TextView
+                android:id="@+id/release_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="2015-06-12"
+                android:layout_alignParentBottom="false"
+                android:layout_alignParentRight="false"
+                android:layout_below="@+id/title"
+                android:layout_toRightOf="@+id/poster"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="50dp"
+                android:textSize="20sp"
+                android:textColor="@color/date"
+                android:gravity="right"
+                android:layout_marginRight="5dp" />
+
+            <TextView
+                android:id="@+id/rating"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/black"
+                android:textSize="16sp"
+                tools:text="7.0/10"
+                android:layout_toRightOf="@+id/poster"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="30dp"
+                android:layout_alignParentBottom="false"
+                android:layout_marginTop="20dp"
+                android:gravity="right"
+                android:layout_below="@+id/release_date" />
+
+            <ImageButton
+                android:id="@+id/like_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:tint="@color/favourite"
+                tools:src="@drawable/abc_btn_rating_star_off_mtrl_alpha"
+                android:layout_below="@+id/rating"
+                android:layout_toRightOf="@+id/poster"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="20dp" />
+                android:layout_marginTop="30dp" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/detail_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:divider="?android:dividerHorizontal"
+            android:orientation="vertical"
+            android:showDividers="middle">
+
+            <TextView
+                android:id="@+id/overview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:textSize="16sp"
+                tools:text="Twenty-two years after the events of Jurassic Park, Isla Nublar now features a fully functioning dinosaur theme park, Jurassic World, as originally envisioned by John Hammond." />
+
+            <LinearLayout
+                android:id="@+id/reviews_container"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:layout_marginBottom="8dp"
+                    android:text="@string/reviews_title"
+                    android:textSize="20sp" />
+
+                <LinearLayout
+                    android:id="@+id/reviews_list_container"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/reviews"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/trailers_container"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="16dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:layout_marginBottom="8dp"
+                    android:text="@string/videos_title"
+                    android:textSize="20sp" />
+
+                <LinearLayout
+                    android:id="@+id/trailers_list_container"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>
